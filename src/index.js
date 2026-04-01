@@ -39,7 +39,7 @@ app.use((err, _req, res, _next) => {
   res.status(500).json({ error: 'Error interno del servidor' });
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 Backend corriendo en http://localhost:${PORT}`);
-  console.log(`📊 API disponible en http://localhost:${PORT}/api`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🚀 Backend corriendo en http://0.0.0.0:${PORT}`);
+  console.log(`📊 API disponible en http://0.0.0.0:${PORT}/api`);
 });
